@@ -12,9 +12,7 @@ const PORT = process.env.PORT || process.env.API_PORT;
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: [process.env.FRONTEND_ORIGIN],
-  }));
+app.use(cors());
 
 // register the routes
 app.use("/api/auth", authRoutes);

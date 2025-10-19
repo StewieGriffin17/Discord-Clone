@@ -14,7 +14,7 @@ let socket = null;
 export const connectWithSocketServer = (userDetails) => {
   const jwtToken = userDetails.token;
 
-  socket = io(process.env.FRONTEND_ORIGIN ||"http://localhost:5002", {
+  socket = io("http://localhost:5002", {
     auth: {
       token: jwtToken,
     },
